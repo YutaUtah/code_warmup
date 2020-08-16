@@ -5,7 +5,7 @@ Nucleotide: IntEnum = IntEnum('Nucleotide', ('A', 'C', 'G', 'T'))
 Codon = Tuple[Nucleotide, Nucleotide, Nucleotide]  # type alias for codons
 Gene = List[Codon]  # type alias for genes
 
-gene_str: str = "ACGTGGCTCTCTAACGTACGTACGTACGGGGTTTATATATACCCTAGGACTCCCTTT"
+gene_str = "ACGTGGCTCTCTAACGTACGTACGTACGGGGTTTATATATACCCTAGGACTCCCTTT"
 
 def string_to_gene(s: str):
     gene = []
