@@ -40,6 +40,8 @@ print(my_gene.__contains__(acg))
 # # this is ordinary linear search where you need to look at each index
 # # ----------------------------------------------------------------------
 
+
+## binary search
 def binary_contains(gene, key_codon):
     low = 0
     high = len(gene) - 1
