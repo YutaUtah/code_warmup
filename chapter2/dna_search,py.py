@@ -57,3 +57,13 @@ def binary_contains(gene, key_codon):
     return False
 
 
+print(len(my_gene))
+print(acg)
+
+def binary(my_gene, acg):
+    low = 0
+    high = len(my_gene) - 1
+
+print(binary_contains(my_gene,acg))
+
+
