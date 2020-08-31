@@ -45,9 +45,23 @@ class Maze:
             output += "".join([c.value for c in row]) + "\n"
         return output
 
+    # check if we reached the goal
+    def goal_test(self, ml):
+        return ml == self.goal
 
-maze = Maze()
-print(maze)
+    def succesors(self, ml):
+        locations = []
+        if ml.row + 1 < self._rows and self._grid[ml.row + 1][ml.column] != Cell.BLOCKED:
+            locations.append(MazeLocation(ml.row + 1, ml.column))
+        if ml.row - 1 >= 0 and self._grid[ml.row - 1][ml.column] != Cell.BLOCKED:
+            locations.append(MazeLocation(ml.row - 1, ml.column))
+        if ml.column + 1 < self._columns and self._grid[ml.row][ml.column + 1] != Cell.BLOCKED:
+            locations.append(MazeLocation(ml.row, ml.column + 1))
+        if ml.row - 1 >= 0 and self._grid[ml.row][ml.column - 1] != Cell.BLOCKED:
+            locations.append(MazeLocation(ml.row, ml.column - 1))
+
+        return locations
+
 
 
 
