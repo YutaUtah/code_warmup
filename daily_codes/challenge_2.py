@@ -23,20 +23,26 @@ SOLUTION: https://repl.it/@morningalgo/MinSubArraySum
 
 *************
 """
-#todo go back
+#window
 s = 7
 nums = [2,3,1,2,4,3]
+left_point = 0
+right_point = 0
+sum = 0
+arr = []
+while right_point < len(nums):
+    sum += nums[right_point]
+    while sum >= 7:
+        arr.append(right_point-left_point+1)
+        # subtract the number on the left and move the left pointer by 1 to the left sides
+        sum -= nums[left_point]
+        left_point += 1
+    right_point += 1
 
-answer = []
-for idx in range(len(nums)):
-    for point in range(1, len(nums)-idx):
-        sum = nums[idx] + nums[idx+point]
-        if sum >= s:
-            answer.append([nums[idx], nums[idx+point]])
-
-print(answer)
+print(arr)
 
 
+# solutions
 def minSubArrayLen(s, nums):
     total = left = right = 0
     res = len(nums) + 1
