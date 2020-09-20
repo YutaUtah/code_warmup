@@ -35,5 +35,4 @@ def remove_vowel(String):
     return String
 
 
-
 print(remove_vowel("leetcodeisacommunityforcoders"))
