@@ -31,25 +31,24 @@ Difficulty
 level: Easy
 """
 
-target = 5
-list = [1, 3, 5, 6]
-count = 0
 
-
-
-def searchInsert(nums, target):
-    l , r = 0, len(nums)-1
-    while l <= r:
-        mid=(l+r)//2
-        if nums[mid]== target:
+def search_insert(nums, target):
+    left, right = 0, len(nums) - 1
+    # left is 0 right is 3
+    while left <= right:
+        mid = (left + right) // 2
+        mid is 1
+        if nums[mid] == target:
             return mid
         if nums[mid] < target:
-            l = mid+1
+            left = mid + 1
         else:
-            r = mid-1
-    return l
+            right = mid - 1
+    return left
 
-print(searchInsert([1,3,5,6], 5)) #2
-print(searchInsert([1,3,5,6], 2)) #1
-print(searchInsert([1,3,5,6], 0)) #0
+
+print(search_insert([1,3,5,6], 5)) #2
+print(search_insert([1,3,5,6], 2)) #1
+print(search_insert([1,3,5,6], 0)) #0
+
 
