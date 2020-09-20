@@ -24,3 +24,15 @@ SOLUTION: https://repl.it/@morningalgo/RemoveVowel
 Asked by: Amazon
 Difficulty level: Easy
 """
+
+def remove_vowel(String):
+    vowel = set('aeiou')
+    for char in String:
+        if char in vowel:
+            String = String.replace(char, "")
+
+    return String
+
+
+
+print(remove_vowel("leetcodeisacommunityforcoders"))
