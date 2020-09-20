@@ -25,6 +25,7 @@ Asked by: Amazon
 Difficulty level: Easy
 """
 
+
 def remove_vowel(String):
     vowel = set('aeiou')
     for char in String:
